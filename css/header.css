@@ -1,0 +1,233 @@
+.header {
+    height: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    border-bottom: 2px solid whitesmoke;
+    background-color: white;
+    z-index: 1;
+}
+.left-section {
+    width: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.hamburger-icon {
+    margin: 0;
+    height: 24px;
+    margin-right: 5px;
+    margin-left: 24px;
+    cursor: pointer;
+}
+
+.yt-icon {
+    width: 105px;
+    height: 55px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+@media(min-width: 1200.1px) {
+    .hamburger-icon {
+        margin-left: 38px;
+    }    
+
+    .yt-icon {
+        margin-left: 32px;
+    }
+}
+
+
+.middle-section {
+    flex: 1;
+    margin-left: 70px;
+    margin-right: 35px;
+    max-width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-bar {
+    height: 32px;
+    flex: 1;
+    width: 0;
+    min-width: 0;
+    padding-left: 12px;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    border: 1px solid #cccccc;
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+    box-shadow: inset 0px 1px 2px #eeeeee;
+    margin-right: -0.5px;
+    outline-width: 0;
+    outline-color: black;
+}
+
+.search-icon-btn {
+    position: relative;
+    border: 1px solid #cccccc;
+    height: 36px;
+    background-color: #f7f7f7;
+    margin-right: 8px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.search-icon {
+    width: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    background-color: #f7f7f7;
+}
+
+.search-icon-btn:hover,
+.search-icon-btn:hover .search-icon {
+    background-color: #c6c6c6;
+}
+
+.voice-search-icon-btn {
+    position: relative;
+    height: 40px;
+    border-radius: 50%;
+    border: none;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+.voice-search-icon {
+    width: 28px;
+    height: 24px;
+    background-color: none;
+}
+
+.tooltip {
+    position: absolute;
+    bottom: -40px;
+    white-space: nowrap;
+}
+
+.tooltip:hover {
+    opacity: 0;
+}
+
+/* .voice-search-icon-btn .tooltip */
+
+.search-icon-btn .tooltip {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 2px;
+    background-color: grey;
+    font-size: 12px;
+    font-family: Roboto, Arial;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.voice-search-icon-btn .tooltip {
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 2px;
+    background-color: grey;
+    font-size: 12px;
+    font-family: Roboto, Arial;
+    color: white;
+    opacity: 0;
+    transition: opacity 0.15s;
+    pointer-events: none;
+}
+
+.search-icon-btn,
+.voice-search-icon-btn,
+.upload-icon,
+.right-section-icons,
+.notification {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon-btn:hover .tooltip,
+.voice-search-icon-btn:hover .tooltip,
+.right-section-icons:hover .tooltip,
+.notification:hover .tooltip {
+    opacity: 0.9;
+}
+
+
+.right-section {
+    width: 180px;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 20px;
+}
+
+.right-section-icons {
+    position: relative;
+}
+
+.right-section-icons .tooltip,
+.notification .tooltip {
+    opacity: 0;
+    pointer-events: none;
+    padding-right: 7px;
+    padding-left: 7px;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    border-radius: 2px;
+    background-color: grey;
+    font-size: 12px;
+    font-family: Roboto, Arial;
+    color: white;
+    transition: opacity 0.15s;
+}
+
+.upload-icon,
+.app-list-icon,
+.bell-icon {
+    height: 24px;
+    cursor: pointer;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.notification-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: rgb(200, 6, 6);
+    color: white;
+    font-family: Roboto, Arial;
+    font-size: 12px;
+    font-weight: 400;
+    border-radius: 50%;
+    padding-right: 4px;
+    padding-left: 4px;
+}
+
+.current-user-pic {
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+}
